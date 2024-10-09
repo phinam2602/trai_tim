@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <title>Trái Tim Phi Nam Tặng Quốc Anh</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container2">
+        <div class="content">
+            <canvas id="universe"></canvas>
+        </div>
+    </div>
+    <div class="title">
+        <h3 class="STARDUST1">2024</h3>
+        <h1 class="STARDUST2">Phi Nam &amp; Quốc Anh</h1>
+        <h3 class="STARDUST3">L O V E <strong>❤</strong> Y O U</h3>
+        <img class="img" src="ảnh.jpg" alt="" />
+        <canvas id="pinkboard"></canvas>
+
+        <!-- Thẻ audio -->
+        <audio id="myAudio" autoplay muted>
+            <source src="Xin Má Rước Dâu.mp3" type="audio/mpeg">
+        </audio>
+        <button id="playButton" onclick="playAudio()">Play Music</button>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/particle.js"></script>
+    <script src="js/universe.js"></script>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.muted = false; // Bỏ tắt tiếng
+            audio.play(); // Phát âm thanh
+        }
+
+        // Tự động phát âm thanh khi trang tải
+        window.onload = function() {
+            var audio = document.getElementById("myAudio");
+            audio.play(); // Thử phát âm thanh
+        };
+    </script>
+</body>
+</html>
